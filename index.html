@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>UnSeen Tools</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,75 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <h1>UnSeen Homes</h1>
+      <div id="showHide">
+      <h3>Sign Up</h3>
+      <form id="sign-up-form">
+        <input name="credentials[email]" type="email" placeholder="Email">
+        <input name="credentials[password]" type="password" placeholder="Enter password">
+        <input name="credentials[password_confirmation]" type="password" placeholder="Enter password again">
+        <button type="submit">Sign Up</button>
+      </form>
+
+      <h3>Sign In</h3>
+      <form id="sign-in-form">
+        <input name="credentials[email]" type="email" placeholder="Email">
+        <input name="credentials[password]" type="password" placeholder="Enter password">
+        <button type="submit">Sign In</button>
+      </form>
+
+
+
+    </div>
+    
+    
+    <div id="hide-fields">
+      <h3>Change Password</h3>
+    <form id="change-password-form">
+      <input name="passwords[old]" type="password" placeholder="Enter old password">
+      <input name="passwords[new]" type="password" placeholder="Enter new password">
+      <button type="submit">Change Password</button>
+    </form>
+  </div>
+
+
+      <h3 id="sign-out-display">Sign Out</h3>
+        <button id="sign-out-button">Sign Out</button>
+
+      <section id="auth-display"></section>
+
+    <div id="contentShowHide">
+
+      <h3>Add New House</h3>
+      <form id="create-house">
+        <input name="house[address]" type="text" placeholder="House Address">
+        <input name="house[size]" type="text" placeholder="House Size (sq)">
+        <input name="house[structure]" type="text" placeholder="House Structure">
+        <button type="submit">Add New House</button>
+      </form>
+
+      <section id="create-house-display"></section>
+
+      <h3>Index Houses</h3>
+      <form id="index-house">
+        <button type="button">Index Houses</button>
+      </form>
+
+      <section id="index-house-display"></section>
+
+
+
+
+      <!-- <h3>Show Houses</h3>
+      <form id="show-house">
+        <input name="house[address]" type="text" placeholder="House Address">
+        <input name="house[size]" type="text" placeholder="House Size (sq)">
+        <input name="house[structure]" type="text" placeholder="House Structure">
+        <button type="button">Show House</button>
+      </form>
+
+      <section id="show-house-display"></section> -->
+    </div>
+
     </body>
 </html>
