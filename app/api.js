@@ -62,8 +62,7 @@ const indexHouse = function () {
 }
 
 const updateHouse = function (data, id) {
-  console.log(data)
-  console.log(id)
+
   /*
       data = {
           houses: {
