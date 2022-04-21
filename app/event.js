@@ -11,12 +11,10 @@ $('#contentShowHide').hide()
 
 const onSignUp = function (event) {
   event.preventDefault()
-  console.log('Signed Up')
 
   // get data from form
   const form = event.target
   const data = getFormFields(form)
-  console.log(data)
 
   // api call
   authApi.signUp(data)
@@ -25,13 +23,10 @@ const onSignUp = function (event) {
 }
 
 const onSignIn = function (event) {
-  console.log('Signed In')
   event.preventDefault()
-  $('#hide-fields').show()
 
   // get data from form
   const data = getFormFields(event.target)
-  console.log(data)
 
   // api call
   authApi.signIn(data)
@@ -41,7 +36,6 @@ const onSignIn = function (event) {
 
 const onChangePassword = function (event) {
   event.preventDefault()
-  console.log('change password ran!')
 
   const data = getFormFields(this)
   authApi.changePassword(data)
@@ -50,7 +44,6 @@ const onChangePassword = function (event) {
 }
 
 const onSignOut = function () {
-  console.log('Signed Out')
   // api call
   $('#contentShowHide').hide()
   $('#sign-out-button').hide()
@@ -63,11 +56,9 @@ const onSignOut = function () {
 
 const onCreateHouse = function (event) {
   event.preventDefault()
-  console.log('Created House')
 
   const form = event.target
   const data = getFormFields(form)
-  console.log(data)
   // api call
   authApi.createHouse(data)
     .then((response) => authUi.onCreateHouseSuccess(response))
@@ -75,7 +66,6 @@ const onCreateHouse = function (event) {
 }
 
 const onIndexHouse = (event) => {
-  console.log('Indexing Houses')
   // get the houses from the API
   // check the Network tab!
   authApi.indexHouse()
@@ -86,7 +76,6 @@ const onIndexHouse = (event) => {
 const onUpdateHouse = (event) => {
   // prevent the page from reloading due to the submit action
   event.preventDefault()
-  console.log('Updating House')
 
   const updateForm = event.target
   const id = $(updateForm).data('id')
@@ -105,8 +94,6 @@ const onDeleteHouse = function (event) {
 
   // we need to find the id of the book
   const houseId = $(deleteButton).data('id')
-
-  console.log(houseId)
 
   authApi
     .deleteHouse(houseId)

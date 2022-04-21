@@ -83,7 +83,6 @@ const updateHouse = function (data, id) {
 }
 
 const deleteHouse = function (id) {
-  console.log(id)
   return $.ajax({
     method: 'DELETE',
     url: config.apiUrl + '/houses/' + id,

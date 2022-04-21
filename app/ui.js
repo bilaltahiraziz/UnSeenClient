@@ -22,7 +22,8 @@ const onSignInSuccess = function (response) {
   $('#sign-out-button').show()
   $('#sign-out-display').show()
   $('#contentShowHide').show()
-  console.log(response)
+  $('#hide-fields').show()
+  // console.log(response)
   // store data from the response in my store object
   store.user = response.user
 }
@@ -35,7 +36,7 @@ const onChangePasswordSuccess = function () {
   $('#auth-display').text('Changed password successfully')
   $('#auth-display').removeClass()
   $('#auth-display').addClass('success')
-  console.log('onChangePasswordSuccess ran and nothing was returned!')
+  // console.log('onChangePasswordSuccess ran and nothing was returned!')
 }
 
 const onChangePasswordFailure = function (error) {
